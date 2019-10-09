@@ -1,14 +1,15 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import MovieList from './components/MovieList';
+import ThemeContextProvider from './contexts/ThemeContext';
 
 function App() {
-  // const [color, toggleTheme] = useState(buttonThemes.blue);
-
   return (
     <div className="app">
-      <NavBar />
-      <MovieList />
+      <ThemeContextProvider>
+        <NavBar />
+        <MovieList />
+      </ThemeContextProvider>
     </div>
   );
 }
